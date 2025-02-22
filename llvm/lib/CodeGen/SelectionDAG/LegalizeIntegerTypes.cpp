@@ -1479,8 +1479,6 @@ bool DAGTypeLegalizer::PromoteIntegerOperand(SDNode *N, unsigned OpNo) {
       LLVM_DEBUG(dbgs() << "Node has been custom lowered, done\n");
       return false;
     }
-  }
- 
   constexpr uint16_t patchpoint_opc_as_isd = ~TargetOpcode::PATCHPOINT;
 
   switch (N->getOpcode()) {
